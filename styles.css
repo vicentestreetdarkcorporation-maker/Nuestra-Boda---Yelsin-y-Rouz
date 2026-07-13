@@ -597,18 +597,27 @@ h1, h2, h3 {
   font-weight: 500;
 }
 
-/* ===== QR ===== */
-.qr-container {
-  text-align: center;
+/* ===== QR – Diseño de dos columnas ===== */
+.qr-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
   margin: 20px 0;
 }
+.qr-container {
+  text-align: center;
+  flex: 0 1 200px;
+}
 .qr-container img {
-  max-width: 220px;
+  max-width: 180px;
   border-radius: 20px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.04);
   border: 2px solid rgba(74, 106, 143, 0.15);
   background: #fff;
   padding: 8px;
+  width: 100%;
+  height: auto;
 }
 .qr-leyenda {
   font-size: 0.9rem;
@@ -844,7 +853,9 @@ h1, h2, h3 {
   .nombres-sobre { font-size: 1.8rem; }
   .btn-ingresar { padding: 12px 28px; font-size: 1rem; }
   .foto-marco { padding: 12px 12px 4px 12px; }
-  .qr-container img { max-width: 160px; }
+  .qr-row { gap: 20px; }
+  .qr-container { flex: 0 1 140px; }
+  .qr-container img { max-width: 140px; }
   .lightbox-content { padding: 10px; }
   .lightbox-title { font-size: 1.4rem; }
   .lightbox-close { top: 20px; right: 20px; font-size: 2.4rem; }
